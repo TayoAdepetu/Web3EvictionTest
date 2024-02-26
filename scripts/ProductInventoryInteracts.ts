@@ -1,7 +1,7 @@
 import { ethers } from "hardhat";
 
 async function main() {
-  const contractWallet = "0x78984Bd5bBDbf9bC0DEbE18227F61064E4ab2cA7";
+  const contractWallet = "0x2B93dA0E4B315754F030Ab4260B09B108cB2cdB8";
   const getInventoryApp = await ethers.getContractAt(
     "ProductInventory",
     contractWallet

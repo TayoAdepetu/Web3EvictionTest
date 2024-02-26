@@ -41,6 +41,7 @@ contract ProductInventory {
 
     function addEmployee(address _employee) public onlyOwner {
         employees[_employee] = true;
+        allEmployees.push(_employee);
     }
 
     function removeEmployee(address _employee) public onlyOwner {
