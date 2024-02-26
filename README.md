@@ -1,10 +1,14 @@
 # Sample Hardhat Project
 
-<img src=""/>
+![Alt Text](./assets/images/Eviction-Compiling-Contracts.PNG)
+
+<br/>
+
+![Alt Text](./assets/images/Eviction-Deploying-Inventory.PNG)
 
 This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
 
-<h2>Try running some of the following tasks:</h2>
+Try running some of the following tasks:
 
 ```shell
 npx hardhat help
