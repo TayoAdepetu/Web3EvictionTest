@@ -9,8 +9,15 @@ contract socialGasNFT is ERC721URIStorage {
     using Strings for uint256;
 
     uint256 private _tokenIds;
+    string private name;
+    string private symbol;
 
-    function constructNewNFT() ERC721(string memory _name, string memory _symbol) {}
+    function constructNewNFT()(string memory _name, string memory _symbol) public {
+        name = _name;
+        symbol = _symbol;
+
+        mint();
+    }
 
     function generateLoveBirds(
         uint256 _tokenId
@@ -37,14 +44,13 @@ contract socialGasNFT is ERC721URIStorage {
 
     function getTokenURI(uint256 _tokenId) public pure returns (string memory) {
         string memory newID = Strings.toString(_tokenId);
+
         bytes memory dataURI = abi.encodePacked(
             "{"
-            '"name": "LoveBirds #',
+            '"name": "',name,' #',
             newID,
             '",',
-            '"description": "Extra-ordinary TeeWhy and KomSEO Love Tales in Pictures ',
-            newID,
-            '",',
+            '"description":"',newID,'"',
             '"image": "',
             generateLoveBirds(_tokenId),
             '"',
